@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let arraylength = +prompt("Nhap vao do dai cua mang: ");
+    for (i=0;i<arraylength; i++)
+    {
+        array[i] = prompt("Truyen gia tri thu cho bien so " + i + " cua mang:" );
+    }
+    document.write("Mang ban dau la: "  + array.join(" , ") +"<br>");
+    let arraystring = "";
+    for (i = arraylength - 1; i>=0;i--)
+    {
+        arraystring = arraystring + array[i];
+    }
+    document.write("Mang sau khi dao nguoc la: " + arraystring);
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let arraylength = +prompt("Nhap vao do dai cua mang: ");
+    for (i=0;i<arraylength; i++)
+    {
+        array[i] = prompt("Truyen gia tri thu cho bien so " + i + " cua mang:" );
+    }
+    document.write("Mang ban dau la: "  + array.join(" , ") +"<br>");
+    let couter = 0;
+    let arraynumber = ["0","1","2","3","4","5","6","7","8","9"];
+    for (i=0;i<arraylength; i++)
+    {
+        let string = array[i];
+        for(j=0;j<string.length;j++)
+        {
+            for (m=0;m<10;m++)
+            {
+                if(string[j]==arraynumber[m])
+                {
+                    couter ++;
+                }
+            }
+        }
+    }
+    document.write("So ky tu so co trong mang la: " + couter);
+</script>
+</body>
+</html>

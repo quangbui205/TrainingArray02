@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let rowarray = +prompt("Nhap vao so Hang cua Mang: ");
+    let colarray = +prompt("Nhap vao so Cot cua mang: ");
+    let min = +prompt("Nhap vao so Nguyen nho nhat ban muon: ");
+    let max = +prompt("Nhap vao so Nguyen lon nhat ban muon: ");
+    let array = [];
+    for(i=0; i< rowarray; i++)
+    {
+        array[i]= new Array(); //Làm sao để bỏ đi vẫn chạy - khai báo mảng 2 chiều từ đầu
+        for (j=0;j<colarray;j++)
+        {
+            array[i][j] = Math.floor(Math.random()*100);
+        }
+    }
+    for(i=0; i< rowarray; i++)
+    {
+        for (j=0 ; j < colarray;j++)
+        {
+            document.write( array[i][j] +" , ");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

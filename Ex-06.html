@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=[];
+    let arraylength = prompt("Nhap vao do dai cua mang: ");
+    for (i=0;i<arraylength; i++)
+    {
+        array[i] = prompt("Truyen gia tri thu cho bien so " + i + " cua mang:" );
+    }
+    document.write("Mang ban dau la: "  + array.join(" , ") +"<br>");
+    let stringnew = "";
+    for (i=0;i<arraylength; i++)
+    {
+        let string = array[i];
+        for(j=0;j<string.length;j++)
+        {
+            stringnew = string.replace(/-/g,"_");
+        }
+        array[i] = stringnew;
+    }
+    document.write("Mang sau khi sua khi la: " + array.join(" , "));
+</script>
+</body>
+</html>
